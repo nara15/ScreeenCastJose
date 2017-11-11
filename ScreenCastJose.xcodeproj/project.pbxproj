@@ -735,7 +735,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WBJ5G347V7;
+				DEVELOPMENT_TEAM = 9GXQ3WRPGX;
 				INFOPLIST_FILE = ScreenCastJose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neil.ScreenCastJose;
@@ -751,7 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WBJ5G347V7;
+				DEVELOPMENT_TEAM = 9GXQ3WRPGX;
 				INFOPLIST_FILE = ScreenCastJose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neil.ScreenCastJose;

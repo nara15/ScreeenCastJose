@@ -31,7 +31,7 @@ class EpisodeListViewModel {
                     break
                 // do something with the data
                 case .error(let error):
-                    
+                    print(error)
                     break
                 }
             }
