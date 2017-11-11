@@ -10,5 +10,6 @@ import Foundation
 
 enum Constants: String {
     case baseURL = "https://www.nsscreencast.com"
-    
+    case baseURLlogin = "http://screencast.getsandbox.com"
+    case defaultURL = ""
 }
