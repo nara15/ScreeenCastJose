@@ -13,6 +13,8 @@ class EpisodeListTableViewController: UITableViewController {
 
     lazy var episodeListViewModel = EpisodeListViewModel()
     let disposeBag = DisposeBag()
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
@@ -28,6 +30,13 @@ class EpisodeListTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 61
         tableView.rowHeight = UITableViewAutomaticDimension
         navigationItem.hidesBackButton = true
+        
+        //  Search bar configuration
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
     }
     
     func setupSignals() {
@@ -78,9 +87,35 @@ class EpisodeListTableViewController: UITableViewController {
                 episodeDetailViewController.episodeViewModel = episodeViewModel
             }
         }
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
     
+}
 
+
+//  Extend our controller to use it with the search bar.
+
+extension EpisodeListTableViewController: UISearchResultsUpdating
+{
+    func updateSearchResults(for searchController: UISearchController)
+    {
+        if let searchForText = searchController.searchBar.text, !searchForText.isEmpty
+        {
+            episodeListViewModel.isFiltered = true
+            episodeListViewModel.filter(by: searchForText)
+            tableView.reloadData()
+        }
+        else
+        {
+            episodeListViewModel.isFiltered = false
+            tableView.reloadData()
+        }
+    }
+}
+
+extension EpisodeListTableViewController: UISearchBarDelegate
+{
+    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        episodeListViewModel.isFiltered = false
+        tableView.reloadData()
+    }
 }

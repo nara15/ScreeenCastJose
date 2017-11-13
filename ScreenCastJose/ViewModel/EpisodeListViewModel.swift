@@ -15,6 +15,8 @@ class EpisodeListViewModel {
     
     let disposeBag = DisposeBag()
     private var episodeList = [MEpisode]()
+    private var filteredEpisodes = [MEpisode]()
+    var isFiltered = false
     
     /// Error loading signal
     lazy var updatedContentSignal = PublishSubject<Any?>()
@@ -39,12 +41,30 @@ class EpisodeListViewModel {
         }.disposed(by: disposeBag)
     }
     
+    /// Filter by string content (in title)
+    func filter(by value:String)
+    {
+        filteredEpisodes.removeAll()
+        for episode in episodeList
+        {
+            if episode.title.lowercased().contains(value.lowercased())
+            {
+                filteredEpisodes.append(episode)
+            }
+        }
+    }
+    
     func numberOfSections() -> Int {
         return 1
     }
     
     func numberOfRows(section: Int) -> Int {
-        return episodeList.count
+        var count = episodeList.count
+        if self.isFiltered
+        {
+            count = filteredEpisodes.count
+        }
+        return count
     }
     
     func title(indexPath: IndexPath) -> String {
@@ -63,7 +83,13 @@ class EpisodeListViewModel {
     }
     
     func object(indexPath: IndexPath) -> MEpisode {
-        return episodeList[indexPath.row]
+        var object = episodeList[indexPath.row]
+        if self.isFiltered
+        {
+            object = filteredEpisodes[indexPath.row]
+        }
+        return object
+        //return episodeList[indexPath.row]
     }
     
     

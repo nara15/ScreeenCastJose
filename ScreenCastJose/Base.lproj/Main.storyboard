@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eky-Zt-4rs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eky-Zt-4rs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,9 +65,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search episode..." id="top-ts-hfM">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="YHA-LV-vgX" id="f5a-7b-C31"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EpisodeCell" rowHeight="61" id="jBO-rX-mqo" customClass="EpisodeTableViewCell" customModule="ScreenCastJose" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="61"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jBO-rX-mqo" id="rWr-DV-5hb">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
@@ -123,10 +131,20 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="searchDisplayController" destination="eDX-eb-7S8" id="vnn-W2-YiN"/>
                         <segue destination="GHW-4N-MpA" kind="show" identifier="ShowEpisodeDetailSegue" id="qtG-zx-wMC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNP-8p-vko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="eDX-eb-7S8">
+                    <connections>
+                        <outlet property="delegate" destination="YHA-LV-vgX" id="ifm-pF-PJz"/>
+                        <outlet property="searchBar" destination="top-ts-hfM" id="x9u-9a-E9t"/>
+                        <outlet property="searchContentsController" destination="YHA-LV-vgX" id="bKA-k5-jcN"/>
+                        <outlet property="searchResultsDataSource" destination="YHA-LV-vgX" id="H5H-Y0-eU3"/>
+                        <outlet property="searchResultsDelegate" destination="YHA-LV-vgX" id="mgW-ev-l4E"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1311.2" y="133.5832083958021"/>
         </scene>
