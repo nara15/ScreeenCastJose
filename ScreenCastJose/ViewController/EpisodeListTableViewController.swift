@@ -36,7 +36,7 @@ class EpisodeListTableViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
         definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
+        navigationItem.searchController = searchController
     }
     
     func setupSignals() {

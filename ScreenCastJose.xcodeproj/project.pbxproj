@@ -13,7 +13,6 @@
 		142E8FF21FB613B500F3024B /* MEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8FF11FB613B500F3024B /* MEpisode.swift */; };
 		142E8FF41FB6156000F3024B /* EpisodeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8FF31FB6156000F3024B /* EpisodeListViewModel.swift */; };
 		1464E88C1FB4BDD300DE2B7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464E88B1FB4BDD300DE2B7C /* AppDelegate.swift */; };
-		1464E8911FB4BDD300DE2B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1464E88F1FB4BDD300DE2B7C /* Main.storyboard */; };
 		1464E8931FB4BDD300DE2B7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1464E8921FB4BDD300DE2B7C /* Assets.xcassets */; };
 		1464E8961FB4BDD300DE2B7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1464E8941FB4BDD300DE2B7C /* LaunchScreen.storyboard */; };
 		1464E8A11FB4BDD400DE2B7C /* ScreenCastJoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464E8A01FB4BDD400DE2B7C /* ScreenCastJoseTests.swift */; };
@@ -27,6 +26,7 @@
 		14BBC5751FB63FD600608986 /* MEpisodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBC5741FB63FD600608986 /* MEpisodeList.swift */; };
 		AE1DE7671FB6546A00A9E568 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1DE7661FB6546A00A9E568 /* MUser.swift */; };
 		AE1DE7691FB654EB00A9E568 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1DE7681FB654EB00A9E568 /* LoginViewModel.swift */; };
+		AED692071FBA0E8E002BA544 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED692061FBA0E8E002BA544 /* Main.storyboard */; };
 		B6F01E0C73E5F08137936B1E /* Pods_ScreenCastJoseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32D56266E9EBBE173D30F0 /* Pods_ScreenCastJoseUITests.framework */; };
 		F3F09C59D26FFE2B686D5A1D /* Pods_ScreenCastJose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F29556E33D96D3A1F04BC0A /* Pods_ScreenCastJose.framework */; };
 /* End PBXBuildFile section */
@@ -55,7 +55,6 @@
 		142E8FF31FB6156000F3024B /* EpisodeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewModel.swift; sourceTree = "<group>"; };
 		1464E8881FB4BDD300DE2B7C /* ScreenCastJose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenCastJose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1464E88B1FB4BDD300DE2B7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1464E8901FB4BDD300DE2B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1464E8921FB4BDD300DE2B7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1464E8951FB4BDD300DE2B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1464E8971FB4BDD300DE2B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		839FF41840E76F87F0F1DE8F /* Pods-ScreenCastJoseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenCastJoseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenCastJoseUITests/Pods-ScreenCastJoseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE1DE7661FB6546A00A9E568 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		AE1DE7681FB654EB00A9E568 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AED692061FBA0E8E002BA544 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B6DE653686A69C04D7E0C175 /* Pods_ScreenCastJoseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenCastJoseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51E009910C982AC519229A2 /* Pods-ScreenCastJoseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenCastJoseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenCastJoseTests/Pods-ScreenCastJoseTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB32D56266E9EBBE173D30F0 /* Pods_ScreenCastJoseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenCastJoseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +145,7 @@
 				1464E8BA1FB4BF2A00DE2B7C /* Model */,
 				1464E8B91FB4BF2300DE2B7C /* ViewController */,
 				1464E88B1FB4BDD300DE2B7C /* AppDelegate.swift */,
-				1464E88F1FB4BDD300DE2B7C /* Main.storyboard */,
+				AED692061FBA0E8E002BA544 /* Main.storyboard */,
 				1464E8921FB4BDD300DE2B7C /* Assets.xcassets */,
 				1464E8941FB4BDD300DE2B7C /* LaunchScreen.storyboard */,
 				1464E8971FB4BDD300DE2B7C /* Info.plist */,
@@ -365,9 +365,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED692071FBA0E8E002BA544 /* Main.storyboard in Resources */,
 				1464E8961FB4BDD300DE2B7C /* LaunchScreen.storyboard in Resources */,
 				1464E8931FB4BDD300DE2B7C /* Assets.xcassets in Resources */,
-				1464E8911FB4BDD300DE2B7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,14 +603,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1464E88F1FB4BDD300DE2B7C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1464E8901FB4BDD300DE2B7C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1464E8941FB4BDD300DE2B7C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
